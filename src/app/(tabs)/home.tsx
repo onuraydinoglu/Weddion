@@ -11,7 +11,7 @@ import { ScreenContainer } from "@/components/ui/ScreenContainer";
 export default function HomeScreen() {
   return (
     <ScreenContainer className="bg-background">
-      <View className="flex-1 px-5 pt-4">
+      <View className="flex-1 pt-4">
         <DashboardHeader />
 
         <ScrollView

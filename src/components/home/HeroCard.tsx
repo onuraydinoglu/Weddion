@@ -7,14 +7,14 @@ export function HeroCard() {
   return (
     <View className="relative overflow-hidden rounded-[28px] bg-surface px-5 py-5">
       <Image
-        source={require("../../../assets/images/floral-corner.png")}
-        className="absolute -right-8 -top-2 h-40 w-40 opacity-90"
+        source={require("../../../assets/images/lavender-garden.png")}
+        className="absolute -right-5 top-2 h-40 w-40 opacity-90"
         resizeMode="contain"
       />
 
       <View className="w-[68%]">
         <AppText variant="caption" className="text-textMuted">
-          Hoş geldin, 👋
+          Hoş geldin
         </AppText>
 
         <AppText
