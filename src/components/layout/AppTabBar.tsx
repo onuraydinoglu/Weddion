@@ -1,4 +1,3 @@
-// src/components/layout/AppTabBar.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, View } from "react-native";
 
@@ -29,6 +28,9 @@ type AppTabBarProps = {
   };
 };
 
+const ACTIVE_COLOR = "#A875D1";
+const PASSIVE_COLOR = "#817A90";
+
 const TAB_ICONS: Record<string, { active: IconName; inactive: IconName }> = {
   home: {
     active: "home",
@@ -57,7 +59,7 @@ export function AppTabBar({ state, descriptors, navigation }: AppTabBarProps) {
   };
 
   return (
-    <View className="absolute bottom-6 left-6 right-6 h-[78px] flex-row items-center justify-between rounded-[32px] border border-borderSoft bg-surface px-5 shadow-sm">
+    <View className="absolute bottom-0 left-0 right-0 h-[96px] flex-row items-center justify-between bg-surface px-3 pb-5 pt-3 shadow-sm">
       {firstTabs.map((route, index) => (
         <TabItem
           key={route.key}
@@ -70,9 +72,9 @@ export function AppTabBar({ state, descriptors, navigation }: AppTabBarProps) {
 
       <Pressable
         onPress={handleCreatePress}
-        className="-mt-9 h-[66px] w-[66px] items-center justify-center rounded-full bg-primary shadow-sm"
+        className="-mt-10 h-12 w-12 items-center justify-center rounded-full bg-primary shadow-sm"
       >
-        <Ionicons name="add" size={34} color="#FFFFFF" />
+        <Ionicons name="add" size={30} color="#FFFFFF" />
       </Pressable>
 
       {lastTabs.map((route, index) => {
@@ -102,22 +104,22 @@ type TabItemProps = {
 function TabItem({ routeName, label, active, onPress }: TabItemProps) {
   const iconSet = TAB_ICONS[routeName];
 
-  if (!iconSet) {
-    return null;
-  }
+  if (!iconSet) return null;
+
+  const color = active ? ACTIVE_COLOR : PASSIVE_COLOR;
 
   return (
-    <Pressable onPress={onPress} className="items-center justify-center gap-1">
+    <Pressable
+      onPress={onPress}
+      className="w-[72px] items-center justify-center gap-1"
+    >
       <Ionicons
         name={active ? iconSet.active : iconSet.inactive}
         size={24}
-        color={active ? "#A875D1" : "#817A90"}
+        color={color}
       />
 
-      <AppText
-        variant="caption"
-        className={`text-[11px] ${active ? "text-primary" : "text-textMuted"}`}
-      >
+      <AppText variant="caption" className="text-[11px]" style={{ color }}>
         {label}
       </AppText>
     </Pressable>

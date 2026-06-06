@@ -11,7 +11,7 @@ export function ScreenContainer({
   className = "",
 }: ScreenContainerProps) {
   return (
-    <SafeAreaView className={`flex-1 bg-background px-6 ${className}`}>
+    <SafeAreaView className={`flex-1 bg-background px-5 ${className}`}>
       {children}
     </SafeAreaView>
   );

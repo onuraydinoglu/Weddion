@@ -37,7 +37,7 @@ export default function HomeScreen() {
         </View>
 
         <View className="gap-5">
-          <AppCard className="rounded-[32px]">
+          <AppCard>
             <View className="flex-row items-center gap-4">
               <View className="h-14 w-14 items-center justify-center rounded-2xl bg-accentLight">
                 <AppText variant="subtitle" className="text-primaryDark">

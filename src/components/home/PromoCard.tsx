@@ -20,7 +20,7 @@ export function PromoCard() {
 
         <Pressable className="mt-5 h-11 w-40 items-center justify-center rounded-xl bg-surface">
           <AppText
-            variant="caption"
+            variant="captionStrong"
             className="font-manropeSemiBold text-[13px] text-primaryDark"
           >
             Tasarım Keşfet
