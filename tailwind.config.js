@@ -18,6 +18,7 @@ module.exports = {
         primary: "#A875D1",
         primaryDark: "#8F5DB9",
         primaryLight: "#E8D9F3",
+        primarySoft: "#F0E6F6",
 
         background: "#F7F2FA",
         backgroundSoft: "#FBF8FD",

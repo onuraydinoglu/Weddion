@@ -1,11 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Image, Pressable, View } from "react-native";
 
+import { AppCard } from "@/components/ui/AppCard";
 import { AppText } from "@/components/ui/AppText";
 
 export function HeroCard() {
   return (
-    <View className="relative overflow-hidden rounded-[28px] bg-surface px-5 py-5">
+    <AppCard className="relative overflow-hidden px-5 py-5">
       <Image
         source={require("../../../assets/images/lavender-garden.png")}
         className="absolute -right-5 top-2 h-40 w-40 opacity-90"
@@ -35,6 +36,6 @@ export function HeroCard() {
           Yeni Davetiye Oluştur
         </AppText>
       </Pressable>
-    </View>
+    </AppCard>
   );
 }
